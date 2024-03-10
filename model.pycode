@@ -1,0 +1,18 @@
+def calculate_fibonacci(n):
+    """Calculate the Fibonacci sequence up to the nth number."""
+    fibonacci_sequence = [0, 1]
+    while len(fibonacci_sequence) < n:
+        next_number = fibonacci_sequence[-1] + fibonacci_sequence[-2]
+        fibonacci_sequence.append(next_number)
+    return fibonacci_sequence
+
+def main():
+    """Main function to demonstrate the Fibonacci calculation."""
+    n = int(input("Enter the number of Fibonacci numbers to calculate: "))
+    fibonacci_numbers = calculate_fibonacci(n)
+    print("Fibonacci sequence up to the {}th number:".format(n))
+    print(fibonacci_numbers)
+
+if __name__ == "__main__":
+    main()
+
